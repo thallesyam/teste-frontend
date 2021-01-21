@@ -72,8 +72,8 @@ export default createGlobalStyle`
   body {
     --white: ${props => props.theme.colors.white};
     --black: ${props => props.theme.colors.black};
-    --gray-light: ${props => props.theme.colors.grayLight};
-    --gray-dark: ${props => props.theme.colors.grayDark}
-    --alert-color: ${props => props.theme.colors.alertColor};
+    --grayLight: ${props => props.theme.colors.grayLight};
+    --grayDark: ${props => props.theme.colors.grayDark};
+    --alertColor: ${props => props.theme.colors.alertColor};
   }
 `
