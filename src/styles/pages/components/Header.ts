@@ -4,7 +4,15 @@ import { MdShoppingCart } from 'react-icons/md'
 import { VscAccount } from 'react-icons/vsc'
 
 // Header Component
+export const UserIconsContainer = styled.div`
+  display: flex;
 
+  @media (max-width: 768px) {
+    div:nth-child(1) {
+      display: none;
+    }
+  }
+`
 export const Header = styled.header`
   width: 100%;
   padding: 2rem 1rem;

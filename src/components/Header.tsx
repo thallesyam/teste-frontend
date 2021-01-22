@@ -5,6 +5,7 @@ import {
   Bars,
   Cart,
   User,
+  UserIconsContainer,
   UserContainer,
   SearchDesk,
   ProductsContainer,
@@ -21,10 +22,8 @@ export default function Home(): JSX.Element {
         <Bars />
 
         <Logo />
-
         <SearchDesk placeholder="O que está procurando ?" />
-
-        <div>
+        <UserIconsContainer>
           <UserContainer>
             <User />
             <span>Minha conta</span>
@@ -36,7 +35,7 @@ export default function Home(): JSX.Element {
               <span>1</span>
             </ProductNumber>
           </ProductsContainer>
-        </div>
+        </UserIconsContainer>
       </Header>
       <SearchContainer>
         <SearchMobile placeholder="O que está procurando ?" />

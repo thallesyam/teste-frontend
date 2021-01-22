@@ -5,6 +5,10 @@ export default createGlobalStyle`
     v2.0 | 20110126
     License: none (public domain)
   */
+  html {
+    width: 100vw;
+  }
+
 
  html, body, div, span, applet, object, iframe,
   h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -54,7 +58,7 @@ export default createGlobalStyle`
   }
 
   body {
-    background: var(--background);
+    background: #fff;
     line-height: 1;
     font-size: 100%;
     font-family: 'Roboto', sans-serif;
@@ -66,6 +70,10 @@ export default createGlobalStyle`
     width: 100%;
     height: auto;
   }
+
+  .active {
+    background-color: var(--alertColor);
+}
 
   /* Variables */
 
