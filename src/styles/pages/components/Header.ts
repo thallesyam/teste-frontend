@@ -3,21 +3,6 @@ import { FaBars } from 'react-icons/fa'
 import { MdShoppingCart } from 'react-icons/md'
 import { VscAccount } from 'react-icons/vsc'
 
-export const Container = styled.section`
-  width: 100%;
-  height: 100vh;
-
-  div {
-    display: flex;
-
-    @media (max-width: 768px) {
-      div:nth-child(1) {
-        display: none;
-      }
-    }
-  }
-`
-
 // Header Component
 
 export const Header = styled.header`
@@ -141,5 +126,3 @@ export const SearchMobile = styled.input`
     display: none;
   }
 `
-
-// Slider Component
