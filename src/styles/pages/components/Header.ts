@@ -101,7 +101,7 @@ const Search = css`
 
   @media (min-width: 768px) {
     width: 70%;
-    max-width: 900px;
+    max-width: 1200px;
     margin: 0 20px;
   }
 `
