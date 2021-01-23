@@ -3,12 +3,12 @@ interface Payment {
   value: number
 }
 
-interface DetailsProduct {
+export interface DetailsProduct {
   productId: number
   productName: string
   stars: number
   imageUrl: string
-  listPrice: number | null
+  listPrice?: number | null
   price: number
   installments: Array<Payment>
 }

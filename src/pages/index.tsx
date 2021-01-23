@@ -1,5 +1,6 @@
 import React from 'react'
-import axios from 'axios'
+import { GetStaticProps } from 'next'
+import axios, { AxiosResponse } from 'axios'
 
 // Style Home Container
 import { Container } from '../styles/pages/Home'
@@ -22,8 +23,13 @@ import Slider from '../components/Slider'
 
 import Newsletter from '../components/Newsletter'
 // Interface
-import { Products } from '../interface/Showcase'
+import { Products, DetailsProduct } from '../interface/Showcase'
+
+// utils
 import { formatValue } from '../utils/formatValue'
+
+// Images
+import polygon from '../assets/polygon.png'
 
 // Breakpoints carousel
 const breakpoints = [
@@ -58,7 +64,15 @@ export default function Home({ products }: Products): JSX.Element {
             return (
               <Product key={index}>
                 <ProductImage>
-                  <img src={product.imageUrl} alt={product.productName} />
+                  {product.listPrice !== null ? (
+                    <>
+                      <img src={product.imageUrl} alt={product.productName} />
+                      <img src={polygon} alt="polygon" />
+                      <h2>OFF</h2>
+                    </>
+                  ) : (
+                    <img src={product.imageUrl} alt={product.productName} />
+                  )}
                 </ProductImage>
                 <ProductDetail>
                   <p>{product.productName}</p>
@@ -72,6 +86,17 @@ export default function Home({ products }: Products): JSX.Element {
                         }
                       })}
                   </div>
+
+                  <h4>
+                    {product.listPrice !== null ? (
+                      `de R$ ${formatValue(product.listPrice)}`
+                    ) : (
+                      <span>
+                        <br />
+                      </span>
+                    )}
+                  </h4>
+
                   <h3>{`por R$ ${formatValue(product.price)}`}</h3>
                   {installments && (
                     <span>{`ou em ${installments.quantity} de R$ ${formatValue(
@@ -94,11 +119,11 @@ export default function Home({ products }: Products): JSX.Element {
 }
 
 // In nextjs we can make calls to api only on pages and not on components
-export const getStaticProps = async () => {
+export const getStaticProps: GetStaticProps = async () => {
   const res = await axios.get(
     'https://corebiz-test.herokuapp.com/api/v1/products'
   )
-  const products = await res.data
+  const products: AxiosResponse<Array<DetailsProduct>> = await res.data
 
   return {
     props: {

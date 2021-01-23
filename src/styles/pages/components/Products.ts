@@ -44,8 +44,25 @@ export const Product = styled.div`
   min-height: 353px;
 `
 export const ProductImage = styled.div`
-  img {
-    height: 200px;
+  position: relative;
+
+  img:nth-child(1) {
+    width: 200px;
+  }
+  img:nth-child(2) {
+    height: 70px;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  h2 {
+    position: absolute;
+    top: 15px;
+    right: 7px;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 900;
   }
 `
 export const ProductDetail = styled.div`
@@ -65,6 +82,12 @@ export const ProductDetail = styled.div`
   h3 {
     font-size: 18px;
     font-weight: 700;
+  }
+
+  h4 {
+    font-size: 15px;
+    font-weight: 400;
+    color: #7a7a7a;
   }
 
   span {
