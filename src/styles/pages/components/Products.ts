@@ -83,6 +83,7 @@ export const ProductDetail = styled.div`
   h3 {
     font-size: 18px;
     font-weight: 700;
+    height: 40px;
   }
 
   h4 {

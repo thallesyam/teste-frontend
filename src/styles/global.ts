@@ -22,7 +22,7 @@ export default createGlobalStyle`
   /* Style Components Elastic Carousel */
 
   /* arrow */
-  .jAkCdf {
+  .jAkCdf, .jAmbxV {
     display: block !important;
     background-color: #fff !important;
     box-shadow: none !important;
@@ -34,7 +34,7 @@ export default createGlobalStyle`
 
 
     @media (max-width: 768px) {
-      display: none;
+      display: none !important;
     }
   }
 
@@ -43,7 +43,7 @@ export default createGlobalStyle`
     display: none !important;
 
     @media (max-width: 768px) {
-      display: block;
+      display: block !important;
     }
   }
 
