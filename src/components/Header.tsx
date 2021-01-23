@@ -35,7 +35,7 @@ export default function Home(): JSX.Element {
           <CartContainer>
             <Cart />
             <ProductNumber>
-              <span>{count}</span>
+              <span>{count === null ? 0 : count}</span>
             </ProductNumber>
           </CartContainer>
         </UserIconsContainer>
