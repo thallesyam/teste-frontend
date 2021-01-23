@@ -27,7 +27,7 @@ export const NewsContainer = styled.div`
     justify-content: center;
 
     div {
-      width: 100%;
+      width: 90%;
     }
 
     input {

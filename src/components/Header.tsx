@@ -17,7 +17,7 @@ import Logo from '../assets/logo.svg'
 import { CountContext } from '../contexts/ProductsCount'
 
 export default function Home(): JSX.Element {
-  const { count } = useContext(CountContext)
+  const { count } = useContext(CountContext)!
 
   return (
     <>

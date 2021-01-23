@@ -43,7 +43,11 @@ const breakpoints = [
 ]
 
 export default function Home({ products }: Products): JSX.Element {
-  const { handleCount } = useContext(CountContext)
+  const { handleCount } = useContext(CountContext)!
+
+  function handleClick(): void {
+    handleCount(null)
+  }
 
   return (
     <Container>
@@ -113,7 +117,7 @@ export default function Home({ products }: Products): JSX.Element {
                     <NotInstallments></NotInstallments>
                   )}
 
-                  <button onClick={handleCount}>comprar</button>
+                  <button onClick={handleClick}>comprar</button>
                 </ProductDetail>
               </Product>
             )
