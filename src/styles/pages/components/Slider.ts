@@ -16,7 +16,7 @@ export const SliderComponent = styled.div`
   > div:nth-child(1) {
     position: relative;
     left: 90px;
-    width: 53%;
+    width: 50%;
     z-index: 2;
 
     @media (max-width: 768px) {
@@ -25,7 +25,7 @@ export const SliderComponent = styled.div`
   }
 
   > div:nth-child(2) {
-    width: 60%;
+    width: 50%;
 
     @media (max-width: 768px) {
       width: 100%;

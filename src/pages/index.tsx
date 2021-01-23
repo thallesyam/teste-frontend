@@ -20,6 +20,7 @@ import {
 import Header from '../components/Header'
 import Slider from '../components/Slider'
 
+import Newsletter from '../components/Newsletter'
 // Interface
 import { Products } from '../interface/Showcase'
 import { formatValue } from '../utils/formatValue'
@@ -86,6 +87,8 @@ export default function Home({ products }: Products): JSX.Element {
         </CarouselContainer>
       </ProductsContainer>
       {/* End Showcase */}
+
+      <Newsletter />
     </Container>
   )
 }

@@ -59,7 +59,7 @@ export const ProductDetail = styled.div`
     margin: 15px 0 20px;
   }
   p {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   h3 {
@@ -74,7 +74,6 @@ export const ProductDetail = styled.div`
   }
 
   button {
-    display: none;
     width: 100%;
     max-width: 132px;
     height: 32px;
@@ -96,10 +95,6 @@ export const ProductDetail = styled.div`
 
   &:hover {
     background-color: var(--grayDark);
-
-    button {
-      display: block;
-    }
   }
 `
 const icon = css`
