@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { GetStaticProps } from 'next'
 import axios, { AxiosResponse } from 'axios'
 
@@ -25,13 +25,16 @@ import Newsletter from '../components/Newsletter'
 import Footer from '../components/Footer'
 
 // Interface
-import { Products, DetailsProduct } from '../interface/Showcase'
+import { Products, DetailsProduct } from '../interface/ShowcaseProps'
 
 // utils
 import { formatValue } from '../utils/formatValue'
 
 // Images
 import polygon from '../assets/polygon.png'
+
+// Context
+import { CountContext } from '../contexts/ProductsCount'
 
 // Breakpoints carousel
 const breakpoints = [
@@ -40,6 +43,8 @@ const breakpoints = [
 ]
 
 export default function Home({ products }: Products): JSX.Element {
+  const { handleCount } = useContext(CountContext)
+
   return (
     <Container>
       <Header />
@@ -108,7 +113,7 @@ export default function Home({ products }: Products): JSX.Element {
                     <NotInstallments></NotInstallments>
                   )}
 
-                  <button>comprar</button>
+                  <button onClick={handleCount}>comprar</button>
                 </ProductDetail>
               </Product>
             )

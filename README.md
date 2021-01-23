@@ -1,7 +1,7 @@
 # TODOS
+Increment Number of products in cart - DONE
 
 Create Mobile Menu
-Increment Number of products in cart
 Review Typing
 Review Code
 Readme

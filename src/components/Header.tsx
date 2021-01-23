@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 
 import {
   Header,
@@ -14,8 +14,11 @@ import {
   SearchMobile
 } from '../styles/pages/components/Header'
 import Logo from '../assets/logo.svg'
+import { CountContext } from '../contexts/ProductsCount'
 
 export default function Home(): JSX.Element {
+  const { count } = useContext(CountContext)
+
   return (
     <>
       <Header>
@@ -32,7 +35,7 @@ export default function Home(): JSX.Element {
           <CartContainer>
             <Cart />
             <ProductNumber>
-              <span>1</span>
+              <span>{count}</span>
             </ProductNumber>
           </CartContainer>
         </UserIconsContainer>

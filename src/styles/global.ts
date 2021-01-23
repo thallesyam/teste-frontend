@@ -16,7 +16,12 @@ export default createGlobalStyle`
 
   .guuruq, .cJeRRR {
     background-color: var(--grayLight) ;
-    
+    display: none;
+
+    @media (max-width: 768px) {
+      display: block;
+    }
+
   }
 
   .cJeRRR:hover, .cJeRRR:focus, .cJeRRR {
