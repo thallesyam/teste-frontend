@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import axios from 'axios'
+
 
 import {
   NewsContainer,
@@ -7,7 +9,7 @@ import {
   InputContainer,
   ButtonSend
 } from '../styles/pages/components/News'
-import axios from 'axios'
+
 
 const Newsletter = (): JSX.Element => {
   const [name, setName] = useState('')
@@ -15,58 +17,63 @@ const Newsletter = (): JSX.Element => {
   const [successMsg, setSuccessMsg] = useState('')
   const [isSuccess, setIsSuccess] = useState(false)
   const [validateEmailMessage, setValidateEmailMessage] = useState('')
-  const [validateEmail, setValidateEmail] = useState(false)
   const [validateNameMessage, setValidateNameMessage] = useState('')
-  const [validateName, setValidateName] = useState(false)
   const [borderName, setBorderName] = useState(false)
   const [borderEmail, setBorderEmail] = useState(false)
+ 
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
 
-    const regexEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
-    const regexName = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ'\s]+$/
+    const nameRegex = /^[A-Za-záàâãéèêíïóôõöúçñÁÀÂÃÉÈÍÏÓÔÕÖÚÇÑ ]+$/
+    const emailRegex = /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/
 
-    if (!regexEmail.test(email)) {
-      setValidateEmailMessage('Preencha com um e-mail válido')
-      setValidateEmail(false)
-      setBorderEmail(true)
-    } else {
-      setValidateEmailMessage('')
-      setValidateEmail(true)
-      setBorderEmail(false)
+    let setEmail
+    let setname
+
+    const data = {
+      name,
+      email
     }
 
-    if (!regexName.test(name)) {
-      setValidateNameMessage('Preencha com seu nome completo')
-      setValidateName(true)
-      setBorderName(true)
-    } else {
-      setValidateNameMessage('')
-      setValidateEmail(false)
+    if(nameRegex.test(data.name)) {
       setBorderName(false)
+      setValidateNameMessage('')
+      setname= true
+
+    }else {
+      setname = false
+      setValidateNameMessage('Preencha com seu nome completo')
+      setBorderName(true)
     }
 
-    if (validateName && validateEmail) {
-      const data = {
-        name,
-        email
-      }
+    if(emailRegex.test(data.email)) {
+      setBorderEmail(false)
+      setValidateEmailMessage('')
+      setEmail = true
+    } else {
+      setEmail = false
+      setValidateEmailMessage('Preencha com um e-mail válido')
+      setBorderEmail(true)
+    }
 
+    if(setname && setEmail) {
       const res = axios.post(
         'https://corebiz-test.herokuapp.com/api/v1/newsletter',
         data
       )
-
+      
       const {
         data: { message }
       } = await res
-
+      
       if (message === 'Created successfully') {
         setSuccessMsg('Seu e-mail foi cadastrado com sucesso! ')
         setIsSuccess(true)
       }
+      
     }
+
   }
 
   return (
@@ -106,7 +113,7 @@ const Newsletter = (): JSX.Element => {
               <p>{validateEmailMessage}</p>
             </InputContainer>
             <InputContainer>
-              <ButtonSend type="submit">Eu quero!</ButtonSend>
+              <ButtonSend type="submit">Eu quero!</ButtonSend> 
             </InputContainer>
           </form>
         </>

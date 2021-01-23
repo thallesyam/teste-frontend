@@ -26,12 +26,12 @@ const Footer = (): JSX.Element => {
           <p>+55 11 3090 1039</p>
         </InfoContainer>
         <ButtonsContainer>
-          <Link href="">
+          <Link href="/">
             <a>
               <Email /> ENTRE EM CONTATO
             </a>
           </Link>
-          <Link href="">
+          <Link href="/">
             <a>
               <Support /> FALE COM O NOSSO <br /> CONSULTOR ONLINE
             </a>

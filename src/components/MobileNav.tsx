@@ -19,7 +19,7 @@ const MobileNav = (): JSX.Element => {
   return (
     <>
       <BarMobile className="navbar">
-        <LinkMenu href="#">
+        <LinkMenu href="/">
           <a onClick={showSidebar}>
             <Bars />
           </a>
@@ -28,14 +28,14 @@ const MobileNav = (): JSX.Element => {
       <NavMobile className={sidebar ? 'nav-menu active' : 'nav-menu'}>
         <ListContainer className="nav-menu-items" onClick={showSidebar}>
           <ItemToggle className="navbar-toggle">
-            <LinkMenu href="#">
+            <LinkMenu href="/">
               <a>
                 <Close />
               </a>
             </LinkMenu>
           </ItemToggle>
           <ItemNavbar>
-            <LinkMenu href="">
+            <LinkMenu href="/">
               <a>Minha Conta</a>
             </LinkMenu>
           </ItemNavbar>
