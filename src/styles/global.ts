@@ -71,9 +71,45 @@ export default createGlobalStyle`
     height: auto;
   }
 
-  .active {
-    background-color: var(--alertColor);
-}
+
+  /* Style Components Elastic Carousel */
+
+  .guuruq, .cJeRRR {
+    background-color: var(--grayLight) ;
+    
+  }
+
+  .cJeRRR:hover, .cJeRRR:focus, .cJeRRR {
+    background-color: var(--alertColor) ;
+    box-shadow: 0 0 1px 2px var(--alertColor) ;
+  }
+
+  .iLquPE, .lgksPe  {
+      display: none;
+
+      background-color: var(--white);
+      border: none;
+      box-shadow: none;
+
+      &:hover {
+        background-color: var(--black) !important;
+        color: #fff !important;
+      }
+  }
+
+  @media (min-width: 710px) {
+    .iLquPE, .lgksPe  {
+      display: block;
+    }
+
+    .guuruq, .bkVSTc {
+      display: none;
+    }
+  }
+
+  /* End style Elastic Carousel */
+
+
 
   /* Variables */
 
