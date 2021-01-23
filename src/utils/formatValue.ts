@@ -1,3 +1,3 @@
 export function formatValue(value: number | undefined): number {
-  return Number((value! / 100).toFixed(2))
+  return Number((value! / 100))
 }

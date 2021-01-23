@@ -22,8 +22,8 @@ export default createGlobalStyle`
   /* Style Components Elastic Carousel */
 
   .guuruq, .cJeRRR {
-    background-color: var(--grayLight) ;
-    display: none;
+    background-color: var(--grayLight) !important;
+    display: none !important;
 
     @media (max-width: 768px) {
       display: block;
@@ -32,16 +32,16 @@ export default createGlobalStyle`
   }
 
   .cJeRRR:hover, .cJeRRR:focus, .cJeRRR {
-    background-color: var(--alertColor) ;
-    box-shadow: 0 0 1px 2px var(--alertColor) ;
+    background-color: var(--alertColor) !important;
+    box-shadow: 0 0 1px 2px var(--alertColor) !important;
   }
 
-  .iLquPE, .lgksPe  {
-      display: none;
+  .iLquPE, .lgksPe, .cOWINi, .jAkCdf  {
+      display: none !important;
 
-      background-color: var(--white);
-      border: none;
-      box-shadow: none;
+      background-color: var(--white) !important;
+      border: none !important;
+      box-shadow: none !important;
 
       &:hover {
         background-color: var(--black) !important;
@@ -51,11 +51,11 @@ export default createGlobalStyle`
 
   @media (min-width: 710px) {
     .iLquPE, .lgksPe  {
-      display: block;
+      display: block !important;
     }
 
     .guuruq, .bkVSTc {
-      display: none;
+      display: none !important;
     }
   }
 

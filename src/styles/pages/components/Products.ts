@@ -77,6 +77,7 @@ export const ProductDetail = styled.div`
   }
   p {
     font-size: 11px;
+    height: 30px;
   }
 
   h3 {

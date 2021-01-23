@@ -1,7 +1,7 @@
 import React, { createContext, useState } from 'react'
 import { DefaultValue, AuxProps } from '../interface/ContextProps'
 
-export const CountContext = createContext<DefaultValue | undefined>(undefined)
+export const CountContext = createContext<DefaultValue | number>(0)
 
 const CountProvider = ({ children }: AuxProps): JSX.Element => {
   const getCount =
