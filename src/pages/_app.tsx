@@ -11,8 +11,8 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
     <ThemeProvider theme={theme}>
       <CountProvider>
         <Component {...pageProps} />
-        <GlobalStyle />
       </CountProvider>
+      <GlobalStyle />
     </ThemeProvider>
   )
 }
