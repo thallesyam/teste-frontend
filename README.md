@@ -1,8 +1,9 @@
 # TODOS
 Increment Number of products in cart - DONE
 Review Typing - DONE
+Create Mobile Menu - DONE
+Review Code - DONE
 
-Create Mobile Menu
-Review Code
+Validate
 Readme
 Deploy
