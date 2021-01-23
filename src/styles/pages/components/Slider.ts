@@ -7,7 +7,7 @@ export const SliderContainer = styled.div`
 
 export const SliderComponent = styled.div`
   width: 100%;
-  height: 430px;
+  height: 435px;
   display: flex;
   align-items: center;
   justify-content: center;

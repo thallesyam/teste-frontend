@@ -132,3 +132,10 @@ export const OutlineStar = styled(AiOutlineStar)`
 export const FillStar = styled(AiFillStar)`
   ${icon}
 `
+export const NotInstallments = styled.span`
+  height: 1px;
+
+  @media (min-width: 768px) {
+    height: 12px;
+  }
+`

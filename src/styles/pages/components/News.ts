@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
 export const NewsContainer = styled.div`
-  margin: 3rem 0;
+  margin: 3rem 0 0;
   width: 100%;
   background-color: #f2f2f2;
 
-  padding: 2rem 1rem;
+  padding: 3rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;

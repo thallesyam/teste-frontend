@@ -14,14 +14,16 @@ import {
   ProductImage,
   ProductDetail,
   OutlineStar,
-  FillStar
+  FillStar,
+  NotInstallments
 } from '../styles/pages/components/Products'
 
 // Components
 import Header from '../components/Header'
 import Slider from '../components/Slider'
-
 import Newsletter from '../components/Newsletter'
+import Footer from '../components/Footer'
+
 // Interface
 import { Products, DetailsProduct } from '../interface/Showcase'
 
@@ -98,10 +100,12 @@ export default function Home({ products }: Products): JSX.Element {
                   </h4>
 
                   <h3>{`por R$ ${formatValue(product.price)}`}</h3>
-                  {installments && (
+                  {installments !== undefined ? (
                     <span>{`ou em ${installments.quantity} de R$ ${formatValue(
                       installments.value
                     )}`}</span>
+                  ) : (
+                    <NotInstallments></NotInstallments>
                   )}
 
                   <button>comprar</button>
@@ -114,6 +118,7 @@ export default function Home({ products }: Products): JSX.Element {
       {/* End Showcase */}
 
       <Newsletter />
+      <Footer />
     </Container>
   )
 }
