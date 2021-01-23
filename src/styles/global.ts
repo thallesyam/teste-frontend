@@ -10,7 +10,14 @@ export default createGlobalStyle`
   body, html {
     height: 100vh ;
   }
+  
+  .nav-menu.active {
+    left: 0;
+    transition: 350ms;
+  }
 
+
+  /* End Mobile Nav */
 
   /* Style Components Elastic Carousel */
 

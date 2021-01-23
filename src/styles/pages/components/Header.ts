@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components'
-import { FaBars } from 'react-icons/fa'
 import { MdShoppingCart } from 'react-icons/md'
 import { VscAccount } from 'react-icons/vsc'
 
@@ -32,15 +31,6 @@ export const Header = styled.header`
 const icons = css`
   color: var(--black);
   font-size: 2rem;
-`
-
-export const Bars = styled(FaBars)`
-  ${icons}
-  width: 2em;
-
-  @media (min-width: 768px) {
-    display: none;
-  }
 `
 
 export const Cart = styled(MdShoppingCart)`
@@ -82,8 +72,8 @@ export const ProductNumber = styled.div`
 
   border-radius: 50%;
 
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 
   display: flex;
   justify-content: center;

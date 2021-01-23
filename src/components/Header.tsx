@@ -1,8 +1,8 @@
 import React, { useContext } from 'react'
+import Link from 'next/link'
 
 import {
   Header,
-  Bars,
   Cart,
   User,
   UserIconsContainer,
@@ -15,6 +15,7 @@ import {
 } from '../styles/pages/components/Header'
 import Logo from '../assets/logo.svg'
 import { CountContext } from '../contexts/ProductsCount'
+import MobileNav from './MobileNav'
 
 export default function Home(): JSX.Element {
   const { count } = useContext(CountContext)!
@@ -22,7 +23,7 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Header>
-        <Bars />
+        <MobileNav />
 
         <Logo />
         <SearchDesk placeholder="O que está procurando ?" />
