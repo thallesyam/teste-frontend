@@ -21,43 +21,32 @@ export default createGlobalStyle`
 
   /* Style Components Elastic Carousel */
 
-  .guuruq, .cJeRRR {
-    background-color: var(--grayLight) !important;
+  /* arrow */
+  .jAkCdf {
+    display: block !important;
+    background-color: #fff !important;
+    box-shadow: none !important;
+
+    &:hover {
+      background-color: #000 !important;
+      color: #fff !important;
+    }
+
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  /* Bullet */
+  .cOWINi {
     display: none !important;
 
     @media (max-width: 768px) {
-      display: block !important;
-    }
-
-  }
-
-  .cJeRRR:hover, .cJeRRR:focus, .cJeRRR {
-    background-color: var(--alertColor) !important;
-    box-shadow: 0 0 1px 2px var(--alertColor) !important;
-  }
-
-  .iLquPE, .lgksPe  {
-      display: none !important;
-
-      background-color: var(--white) !important;
-      border: none !important;
-      box-shadow: none !important;
-
-      &:hover {
-        background-color: var(--black) !important;
-        color: #fff !important;
-      }
-  }
-
-  @media (min-width: 710px) {
-    .iLquPE, .lgksPe  {
-      display: block !important;
-    }
-
-    .guuruq, .bkVSTc {
-      display: none !important;
+      display: block;
     }
   }
+
 
   /* End style Elastic Carousel */
 
