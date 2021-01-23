@@ -26,7 +26,7 @@ export default createGlobalStyle`
     display: none !important;
 
     @media (max-width: 768px) {
-      display: block;
+      display: block !important;
     }
 
   }
@@ -36,7 +36,7 @@ export default createGlobalStyle`
     box-shadow: 0 0 1px 2px var(--alertColor) !important;
   }
 
-  .iLquPE, .lgksPe, .cOWINi, .jAkCdf  {
+  .iLquPE, .lgksPe  {
       display: none !important;
 
       background-color: var(--white) !important;
