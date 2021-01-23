@@ -8,7 +8,7 @@ import {
   UserIconsContainer,
   UserContainer,
   SearchDesk,
-  ProductsContainer,
+  CartContainer,
   ProductNumber,
   SearchContainer,
   SearchMobile
@@ -29,12 +29,12 @@ export default function Home(): JSX.Element {
             <span>Minha conta</span>
           </UserContainer>
 
-          <ProductsContainer>
+          <CartContainer>
             <Cart />
             <ProductNumber>
               <span>1</span>
             </ProductNumber>
-          </ProductsContainer>
+          </CartContainer>
         </UserIconsContainer>
       </Header>
       <SearchContainer>

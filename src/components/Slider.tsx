@@ -4,6 +4,7 @@ import {
   SliderContainer,
   Bullets,
   SliderComponent,
+  LeadOffert,
   ColumnSlide
 } from '../styles/pages/components/Slider'
 import slider from '../assets/slider.png'
@@ -21,14 +22,15 @@ export default function Slider(): JSX.Element {
             <img src={slider} />
           </ColumnSlide>
 
-          <section>
+          <LeadOffert>
             <h4>Olá, o que você está buscando?</h4>
             <h1>
               Criar ou migrar seu <br /> e-commerce?
             </h1>
-          </section>
+          </LeadOffert>
 
           <Bullets>
+            <span></span>
             <span></span>
             <span></span>
             <span></span>

@@ -71,7 +71,7 @@ export const UserContainer = styled.div`
 
 // End Icons Style
 
-export const ProductsContainer = styled.div`
+export const CartContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: top;
